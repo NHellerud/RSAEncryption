@@ -10,11 +10,37 @@ using System.Windows.Forms;
 
 namespace RSAEncryption
 {
-    public partial class Form1 : Form
+    public partial class RSAEncryption : Form
     {
-        public Form1()
+        public RSAEncryption()
         {
             InitializeComponent();
+            OverviewPanel.BringToFront();
+        }
+
+        private void OverviewButton_Click(object sender, EventArgs e)
+        {
+            OverviewPanel.BringToFront();
+        }
+
+        private void EavesdropperButton_Click(object sender, EventArgs e)
+        {
+            EavesdropperPanel.BringToFront();
+        }
+
+        private void RSAEncryption_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ValuesButton_Click(object sender, EventArgs e)
+        {
+            ValuesPanel.BringToFront();
+        }
+
+        private void NetworkButton_Click(object sender, EventArgs e)
+        {
+            NetworkPanel.BringToFront();
         }
     }
 }
