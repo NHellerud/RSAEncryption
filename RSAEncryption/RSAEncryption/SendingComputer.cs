@@ -13,6 +13,93 @@ namespace RSAEncryption
         protected int _computedPrivateKey;
         protected int _publicKey;
         protected int _coPrimeNumber;
+        protected int _port;
+        protected string _ipAddress;
+        protected Message[] _messages = new Message[3];
+
+        public int PublicKey
+        {
+            get
+            {
+                return _publicKey;
+            }
+            protected set
+            {
+                _publicKey = value;
+            }
+        }
+
+        public int PrivateKey
+        {
+            get
+            {
+                return _computedPrivateKey;
+            }
+            protected set
+            {
+                _computedPrivateKey = value;
+            }
+        }
+
+        public int PrivateKeyA
+        {
+            get
+            {
+                return _privateKeyA;
+            }
+            set
+            {
+                _privateKeyA = value;
+            }
+        }
+
+        public int PrivateKeyB
+        {
+            get
+            {
+                return _privateKeyB;
+            }
+            set
+            {
+                _privateKeyB = value;
+            }
+        }
+
+        public int Port
+        {
+            get
+            {
+                return _port;
+            }
+            set
+            {
+                _port = value;
+            }
+        }
+
+        public string IPAddr
+        {
+            get
+            {
+                return _ipAddress;
+            }
+            set
+            {
+                _ipAddress = value;
+            }
+        }
+
+        public Message[] Messages
+        {
+            get
+            {
+                return _messages;
+            }
+            set
+            {
+                _messages = value;
+            }
+        }
 
         public void GenerateKey( int max, int min)
         {

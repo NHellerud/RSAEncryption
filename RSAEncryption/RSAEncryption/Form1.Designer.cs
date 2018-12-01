@@ -35,67 +35,67 @@
             this.EavesdropperButton = new System.Windows.Forms.Button();
             this.EavesdropperPanel = new System.Windows.Forms.Panel();
             this.EavesdropperGoButton = new System.Windows.Forms.Button();
-            EavesdropperMessageTextBox = new System.Windows.Forms.TextBox();
+            this.EavesdropperMessageTextBox = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            EavesdropperServerPrivateKeyBTextBox = new System.Windows.Forms.TextBox();
-            EavesdropperServerPrivateKeyATextBox = new System.Windows.Forms.TextBox();
+            this.EavesdropperServerPrivateKeyBTextBox = new System.Windows.Forms.TextBox();
+            this.EavesdropperServerPrivateKeyATextBox = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            EavesdropperClientPrivateKeyBTextBox = new System.Windows.Forms.TextBox();
-            EavesdropperClientPrivateKeyATextBox = new System.Windows.Forms.TextBox();
+            this.EavesdropperClientPrivateKeyBTextBox = new System.Windows.Forms.TextBox();
+            this.EavesdropperClientPrivateKeyATextBox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.OverviewPanel = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            OverviewMessageTextBox = new System.Windows.Forms.TextBox();
+            this.OverviewServerPrivKeyTextBox = new System.Windows.Forms.TextBox();
+            this.OverviewServerPubKeyTextBox = new System.Windows.Forms.TextBox();
+            this.OverviewClientPrivKeyTextBox = new System.Windows.Forms.TextBox();
+            this.OverviewClientPubKeyTextBox = new System.Windows.Forms.TextBox();
+            this.NextButton = new System.Windows.Forms.Button();
+            this.PrevButton = new System.Windows.Forms.Button();
+            this.OverviewMessageTextBox = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            OverviewToTextBox = new System.Windows.Forms.TextBox();
-            OverviewFromTextBox = new System.Windows.Forms.TextBox();
+            this.OverviewToTextBox = new System.Windows.Forms.TextBox();
+            this.OverviewFromTextBox = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
-            OverviewServerPortTextBox = new System.Windows.Forms.TextBox();
+            this.OverviewServerPortTextBox = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
-            OverviewServerIPTextBox = new System.Windows.Forms.TextBox();
+            this.OverviewServerIPTextBox = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
-            OverviewClientPortTextBox = new System.Windows.Forms.TextBox();
+            this.OverviewClientPortTextBox = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
-            OverviewClientIPTextBox = new System.Windows.Forms.TextBox();
+            this.OverviewClientIPTextBox = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.ValuesPanel = new System.Windows.Forms.Panel();
-            ValuesMessageTextBox = new System.Windows.Forms.TextBox();
+            this.ValuesMessageTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.StartButton = new System.Windows.Forms.Button();
             this.ValuesGenerateButton = new System.Windows.Forms.Button();
-            MaxKeyValueTextBox = new System.Windows.Forms.TextBox();
-            MinKeyValueTextBox = new System.Windows.Forms.TextBox();
+            this.MaxKeyValueTextBox = new System.Windows.Forms.TextBox();
+            this.MinKeyValueTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.NetworkPanel = new System.Windows.Forms.Panel();
-            NetworkServerTextBox = new System.Windows.Forms.TextBox();
-            NetworkClientTextBox = new System.Windows.Forms.TextBox();
-            NetworkPortTextBox = new System.Windows.Forms.TextBox();
-            ServerCheckBox = new System.Windows.Forms.CheckBox();
-            ClientCheckBox = new System.Windows.Forms.CheckBox();
+            this.NetworkServerTextBox = new System.Windows.Forms.TextBox();
+            this.NetworkClientTextBox = new System.Windows.Forms.TextBox();
+            this.NetworkPortTextBox = new System.Windows.Forms.TextBox();
+            this.ServerCheckBox = new System.Windows.Forms.CheckBox();
+            this.ClientCheckBox = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            OverviewClientPubKeyTextBox = new System.Windows.Forms.TextBox();
-            OverviewClientPrivKeyTextBox = new System.Windows.Forms.TextBox();
-            OverviewServerPubKeyTextBox = new System.Windows.Forms.TextBox();
-            OverviewServerPrivKeyTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.EavesdropperPanel.SuspendLayout();
             this.OverviewPanel.SuspendLayout();
@@ -162,20 +162,20 @@
             // EavesdropperPanel
             // 
             this.EavesdropperPanel.Controls.Add(this.EavesdropperGoButton);
-            this.EavesdropperPanel.Controls.Add(EavesdropperMessageTextBox);
+            this.EavesdropperPanel.Controls.Add(this.EavesdropperMessageTextBox);
             this.EavesdropperPanel.Controls.Add(this.label25);
-            this.EavesdropperPanel.Controls.Add(EavesdropperServerPrivateKeyBTextBox);
-            this.EavesdropperPanel.Controls.Add(EavesdropperServerPrivateKeyATextBox);
+            this.EavesdropperPanel.Controls.Add(this.EavesdropperServerPrivateKeyBTextBox);
+            this.EavesdropperPanel.Controls.Add(this.EavesdropperServerPrivateKeyATextBox);
             this.EavesdropperPanel.Controls.Add(this.label23);
             this.EavesdropperPanel.Controls.Add(this.label24);
-            this.EavesdropperPanel.Controls.Add(EavesdropperClientPrivateKeyBTextBox);
-            this.EavesdropperPanel.Controls.Add(EavesdropperClientPrivateKeyATextBox);
+            this.EavesdropperPanel.Controls.Add(this.EavesdropperClientPrivateKeyBTextBox);
+            this.EavesdropperPanel.Controls.Add(this.EavesdropperClientPrivateKeyATextBox);
             this.EavesdropperPanel.Controls.Add(this.label22);
             this.EavesdropperPanel.Controls.Add(this.label21);
             this.EavesdropperPanel.Controls.Add(this.label20);
             this.EavesdropperPanel.Controls.Add(this.label19);
             this.EavesdropperPanel.Controls.Add(this.label18);
-            this.EavesdropperPanel.Location = new System.Drawing.Point(158, 0);
+            this.EavesdropperPanel.Location = new System.Drawing.Point(156, 0);
             this.EavesdropperPanel.Name = "EavesdropperPanel";
             this.EavesdropperPanel.Size = new System.Drawing.Size(825, 550);
             this.EavesdropperPanel.TabIndex = 33;
@@ -191,11 +191,11 @@
             // 
             // EavesdropperMessageTextBox
             // 
-            EavesdropperMessageTextBox.Location = new System.Drawing.Point(320, 339);
-            EavesdropperMessageTextBox.Name = "EavesdropperMessageTextBox";
-            EavesdropperMessageTextBox.ReadOnly = true;
-            EavesdropperMessageTextBox.Size = new System.Drawing.Size(100, 22);
-            EavesdropperMessageTextBox.TabIndex = 12;
+            this.EavesdropperMessageTextBox.Location = new System.Drawing.Point(320, 339);
+            this.EavesdropperMessageTextBox.Name = "EavesdropperMessageTextBox";
+            this.EavesdropperMessageTextBox.ReadOnly = true;
+            this.EavesdropperMessageTextBox.Size = new System.Drawing.Size(100, 22);
+            this.EavesdropperMessageTextBox.TabIndex = 12;
             // 
             // label25
             // 
@@ -209,19 +209,19 @@
             // 
             // EavesdropperServerPrivateKeyBTextBox
             // 
-            EavesdropperServerPrivateKeyBTextBox.Location = new System.Drawing.Point(511, 200);
-            EavesdropperServerPrivateKeyBTextBox.Name = "EavesdropperServerPrivateKeyBTextBox";
-            EavesdropperServerPrivateKeyBTextBox.ReadOnly = true;
-            EavesdropperServerPrivateKeyBTextBox.Size = new System.Drawing.Size(100, 22);
-            EavesdropperServerPrivateKeyBTextBox.TabIndex = 10;
+            this.EavesdropperServerPrivateKeyBTextBox.Location = new System.Drawing.Point(511, 200);
+            this.EavesdropperServerPrivateKeyBTextBox.Name = "EavesdropperServerPrivateKeyBTextBox";
+            this.EavesdropperServerPrivateKeyBTextBox.ReadOnly = true;
+            this.EavesdropperServerPrivateKeyBTextBox.Size = new System.Drawing.Size(100, 22);
+            this.EavesdropperServerPrivateKeyBTextBox.TabIndex = 10;
             // 
             // EavesdropperServerPrivateKeyATextBox
             // 
-            EavesdropperServerPrivateKeyATextBox.Location = new System.Drawing.Point(511, 162);
-            EavesdropperServerPrivateKeyATextBox.Name = "EavesdropperServerPrivateKeyATextBox";
-            EavesdropperServerPrivateKeyATextBox.ReadOnly = true;
-            EavesdropperServerPrivateKeyATextBox.Size = new System.Drawing.Size(100, 22);
-            EavesdropperServerPrivateKeyATextBox.TabIndex = 9;
+            this.EavesdropperServerPrivateKeyATextBox.Location = new System.Drawing.Point(511, 162);
+            this.EavesdropperServerPrivateKeyATextBox.Name = "EavesdropperServerPrivateKeyATextBox";
+            this.EavesdropperServerPrivateKeyATextBox.ReadOnly = true;
+            this.EavesdropperServerPrivateKeyATextBox.Size = new System.Drawing.Size(100, 22);
+            this.EavesdropperServerPrivateKeyATextBox.TabIndex = 9;
             // 
             // label23
             // 
@@ -243,19 +243,19 @@
             // 
             // EavesdropperClientPrivateKeyBTextBox
             // 
-            EavesdropperClientPrivateKeyBTextBox.Location = new System.Drawing.Point(216, 200);
-            EavesdropperClientPrivateKeyBTextBox.Name = "EavesdropperClientPrivateKeyBTextBox";
-            EavesdropperClientPrivateKeyBTextBox.ReadOnly = true;
-            EavesdropperClientPrivateKeyBTextBox.Size = new System.Drawing.Size(100, 22);
-            EavesdropperClientPrivateKeyBTextBox.TabIndex = 6;
+            this.EavesdropperClientPrivateKeyBTextBox.Location = new System.Drawing.Point(216, 200);
+            this.EavesdropperClientPrivateKeyBTextBox.Name = "EavesdropperClientPrivateKeyBTextBox";
+            this.EavesdropperClientPrivateKeyBTextBox.ReadOnly = true;
+            this.EavesdropperClientPrivateKeyBTextBox.Size = new System.Drawing.Size(100, 22);
+            this.EavesdropperClientPrivateKeyBTextBox.TabIndex = 6;
             // 
             // EavesdropperClientPrivateKeyATextBox
             // 
-            EavesdropperClientPrivateKeyATextBox.Location = new System.Drawing.Point(216, 162);
-            EavesdropperClientPrivateKeyATextBox.Name = "EavesdropperClientPrivateKeyATextBox";
-            EavesdropperClientPrivateKeyATextBox.ReadOnly = true;
-            EavesdropperClientPrivateKeyATextBox.Size = new System.Drawing.Size(100, 22);
-            EavesdropperClientPrivateKeyATextBox.TabIndex = 5;
+            this.EavesdropperClientPrivateKeyATextBox.Location = new System.Drawing.Point(216, 162);
+            this.EavesdropperClientPrivateKeyATextBox.Name = "EavesdropperClientPrivateKeyATextBox";
+            this.EavesdropperClientPrivateKeyATextBox.ReadOnly = true;
+            this.EavesdropperClientPrivateKeyATextBox.Size = new System.Drawing.Size(100, 22);
+            this.EavesdropperClientPrivateKeyATextBox.TabIndex = 5;
             // 
             // label22
             // 
@@ -307,64 +307,98 @@
             // 
             // OverviewPanel
             // 
-            this.OverviewPanel.Controls.Add(OverviewServerPrivKeyTextBox);
-            this.OverviewPanel.Controls.Add(OverviewServerPubKeyTextBox);
-            this.OverviewPanel.Controls.Add(OverviewClientPrivKeyTextBox);
-            this.OverviewPanel.Controls.Add(OverviewClientPubKeyTextBox);
-            this.OverviewPanel.Controls.Add(this.button2);
-            this.OverviewPanel.Controls.Add(this.button3);
-            this.OverviewPanel.Controls.Add(OverviewMessageTextBox);
+            this.OverviewPanel.Controls.Add(this.OverviewServerPrivKeyTextBox);
+            this.OverviewPanel.Controls.Add(this.OverviewServerPubKeyTextBox);
+            this.OverviewPanel.Controls.Add(this.OverviewClientPrivKeyTextBox);
+            this.OverviewPanel.Controls.Add(this.OverviewClientPubKeyTextBox);
+            this.OverviewPanel.Controls.Add(this.NextButton);
+            this.OverviewPanel.Controls.Add(this.PrevButton);
+            this.OverviewPanel.Controls.Add(this.OverviewMessageTextBox);
             this.OverviewPanel.Controls.Add(this.label34);
-            this.OverviewPanel.Controls.Add(OverviewToTextBox);
-            this.OverviewPanel.Controls.Add(OverviewFromTextBox);
+            this.OverviewPanel.Controls.Add(this.OverviewToTextBox);
+            this.OverviewPanel.Controls.Add(this.OverviewFromTextBox);
             this.OverviewPanel.Controls.Add(this.label35);
             this.OverviewPanel.Controls.Add(this.label36);
             this.OverviewPanel.Controls.Add(this.label37);
             this.OverviewPanel.Controls.Add(this.label38);
             this.OverviewPanel.Controls.Add(this.label40);
             this.OverviewPanel.Controls.Add(this.label41);
-            this.OverviewPanel.Controls.Add(OverviewServerPortTextBox);
+            this.OverviewPanel.Controls.Add(this.OverviewServerPortTextBox);
             this.OverviewPanel.Controls.Add(this.label42);
             this.OverviewPanel.Controls.Add(this.label43);
-            this.OverviewPanel.Controls.Add(OverviewServerIPTextBox);
+            this.OverviewPanel.Controls.Add(this.OverviewServerIPTextBox);
             this.OverviewPanel.Controls.Add(this.label45);
             this.OverviewPanel.Controls.Add(this.label46);
-            this.OverviewPanel.Controls.Add(OverviewClientPortTextBox);
+            this.OverviewPanel.Controls.Add(this.OverviewClientPortTextBox);
             this.OverviewPanel.Controls.Add(this.label47);
             this.OverviewPanel.Controls.Add(this.label48);
             this.OverviewPanel.Controls.Add(this.label49);
-            this.OverviewPanel.Controls.Add(OverviewClientIPTextBox);
+            this.OverviewPanel.Controls.Add(this.OverviewClientIPTextBox);
             this.OverviewPanel.Controls.Add(this.label50);
             this.OverviewPanel.Location = new System.Drawing.Point(156, 0);
             this.OverviewPanel.Name = "OverviewPanel";
             this.OverviewPanel.Size = new System.Drawing.Size(825, 550);
             this.OverviewPanel.TabIndex = 33;
             // 
-            // button2
+            // OverviewServerPrivKeyTextBox
             // 
-            this.button2.Location = new System.Drawing.Point(723, 518);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Next";
-            this.button2.UseVisualStyleBackColor = true;
+            this.OverviewServerPrivKeyTextBox.Location = new System.Drawing.Point(634, 223);
+            this.OverviewServerPrivKeyTextBox.Name = "OverviewServerPrivKeyTextBox";
+            this.OverviewServerPrivKeyTextBox.ReadOnly = true;
+            this.OverviewServerPrivKeyTextBox.Size = new System.Drawing.Size(100, 22);
+            this.OverviewServerPrivKeyTextBox.TabIndex = 35;
             // 
-            // button3
+            // OverviewServerPubKeyTextBox
             // 
-            this.button3.Location = new System.Drawing.Point(604, 518);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "Prev";
-            this.button3.UseVisualStyleBackColor = true;
+            this.OverviewServerPubKeyTextBox.Location = new System.Drawing.Point(634, 185);
+            this.OverviewServerPubKeyTextBox.Name = "OverviewServerPubKeyTextBox";
+            this.OverviewServerPubKeyTextBox.ReadOnly = true;
+            this.OverviewServerPubKeyTextBox.Size = new System.Drawing.Size(100, 22);
+            this.OverviewServerPubKeyTextBox.TabIndex = 34;
+            // 
+            // OverviewClientPrivKeyTextBox
+            // 
+            this.OverviewClientPrivKeyTextBox.Location = new System.Drawing.Point(189, 223);
+            this.OverviewClientPrivKeyTextBox.Name = "OverviewClientPrivKeyTextBox";
+            this.OverviewClientPrivKeyTextBox.ReadOnly = true;
+            this.OverviewClientPrivKeyTextBox.Size = new System.Drawing.Size(100, 22);
+            this.OverviewClientPrivKeyTextBox.TabIndex = 33;
+            // 
+            // OverviewClientPubKeyTextBox
+            // 
+            this.OverviewClientPubKeyTextBox.Location = new System.Drawing.Point(189, 186);
+            this.OverviewClientPubKeyTextBox.Name = "OverviewClientPubKeyTextBox";
+            this.OverviewClientPubKeyTextBox.ReadOnly = true;
+            this.OverviewClientPubKeyTextBox.Size = new System.Drawing.Size(100, 22);
+            this.OverviewClientPubKeyTextBox.TabIndex = 32;
+            // 
+            // NextButton
+            // 
+            this.NextButton.Location = new System.Drawing.Point(723, 518);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(75, 23);
+            this.NextButton.TabIndex = 31;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // PrevButton
+            // 
+            this.PrevButton.Location = new System.Drawing.Point(604, 518);
+            this.PrevButton.Name = "PrevButton";
+            this.PrevButton.Size = new System.Drawing.Size(75, 23);
+            this.PrevButton.TabIndex = 30;
+            this.PrevButton.Text = "Prev";
+            this.PrevButton.UseVisualStyleBackColor = true;
+            this.PrevButton.Click += new System.EventHandler(this.button3_Click);
             // 
             // OverviewMessageTextBox
             // 
-            OverviewMessageTextBox.Location = new System.Drawing.Point(257, 403);
-            OverviewMessageTextBox.Name = "OverviewMessageTextBox";
-            OverviewMessageTextBox.ReadOnly = true;
-            OverviewMessageTextBox.Size = new System.Drawing.Size(100, 22);
-            OverviewMessageTextBox.TabIndex = 29;
+            this.OverviewMessageTextBox.Location = new System.Drawing.Point(257, 403);
+            this.OverviewMessageTextBox.Name = "OverviewMessageTextBox";
+            this.OverviewMessageTextBox.ReadOnly = true;
+            this.OverviewMessageTextBox.Size = new System.Drawing.Size(354, 22);
+            this.OverviewMessageTextBox.TabIndex = 29;
             // 
             // label34
             // 
@@ -377,19 +411,19 @@
             // 
             // OverviewToTextBox
             // 
-            OverviewToTextBox.Location = new System.Drawing.Point(401, 361);
-            OverviewToTextBox.Name = "OverviewToTextBox";
-            OverviewToTextBox.ReadOnly = true;
-            OverviewToTextBox.Size = new System.Drawing.Size(101, 22);
-            OverviewToTextBox.TabIndex = 27;
+            this.OverviewToTextBox.Location = new System.Drawing.Point(401, 361);
+            this.OverviewToTextBox.Name = "OverviewToTextBox";
+            this.OverviewToTextBox.ReadOnly = true;
+            this.OverviewToTextBox.Size = new System.Drawing.Size(101, 22);
+            this.OverviewToTextBox.TabIndex = 27;
             // 
             // OverviewFromTextBox
             // 
-            OverviewFromTextBox.Location = new System.Drawing.Point(256, 361);
-            OverviewFromTextBox.Name = "OverviewFromTextBox";
-            OverviewFromTextBox.ReadOnly = true;
-            OverviewFromTextBox.Size = new System.Drawing.Size(101, 22);
-            OverviewFromTextBox.TabIndex = 26;
+            this.OverviewFromTextBox.Location = new System.Drawing.Point(256, 361);
+            this.OverviewFromTextBox.Name = "OverviewFromTextBox";
+            this.OverviewFromTextBox.ReadOnly = true;
+            this.OverviewFromTextBox.Size = new System.Drawing.Size(101, 22);
+            this.OverviewFromTextBox.TabIndex = 26;
             // 
             // label35
             // 
@@ -449,11 +483,11 @@
             // 
             // OverviewServerPortTextBox
             // 
-            OverviewServerPortTextBox.Location = new System.Drawing.Point(634, 146);
-            OverviewServerPortTextBox.Name = "OverviewServerPortTextBox";
-            OverviewServerPortTextBox.ReadOnly = true;
-            OverviewServerPortTextBox.Size = new System.Drawing.Size(100, 22);
-            OverviewServerPortTextBox.TabIndex = 15;
+            this.OverviewServerPortTextBox.Location = new System.Drawing.Point(634, 146);
+            this.OverviewServerPortTextBox.Name = "OverviewServerPortTextBox";
+            this.OverviewServerPortTextBox.ReadOnly = true;
+            this.OverviewServerPortTextBox.Size = new System.Drawing.Size(100, 22);
+            this.OverviewServerPortTextBox.TabIndex = 15;
             // 
             // label42
             // 
@@ -475,11 +509,11 @@
             // 
             // OverviewServerIPTextBox
             // 
-            OverviewServerIPTextBox.Location = new System.Drawing.Point(634, 107);
-            OverviewServerIPTextBox.Name = "OverviewServerIPTextBox";
-            OverviewServerIPTextBox.ReadOnly = true;
-            OverviewServerIPTextBox.Size = new System.Drawing.Size(100, 22);
-            OverviewServerIPTextBox.TabIndex = 12;
+            this.OverviewServerIPTextBox.Location = new System.Drawing.Point(634, 107);
+            this.OverviewServerIPTextBox.Name = "OverviewServerIPTextBox";
+            this.OverviewServerIPTextBox.ReadOnly = true;
+            this.OverviewServerIPTextBox.Size = new System.Drawing.Size(100, 22);
+            this.OverviewServerIPTextBox.TabIndex = 12;
             // 
             // label45
             // 
@@ -501,11 +535,11 @@
             // 
             // OverviewClientPortTextBox
             // 
-            OverviewClientPortTextBox.Location = new System.Drawing.Point(189, 146);
-            OverviewClientPortTextBox.Name = "OverviewClientPortTextBox";
-            OverviewClientPortTextBox.ReadOnly = true;
-            OverviewClientPortTextBox.Size = new System.Drawing.Size(100, 22);
-            OverviewClientPortTextBox.TabIndex = 5;
+            this.OverviewClientPortTextBox.Location = new System.Drawing.Point(189, 146);
+            this.OverviewClientPortTextBox.Name = "OverviewClientPortTextBox";
+            this.OverviewClientPortTextBox.ReadOnly = true;
+            this.OverviewClientPortTextBox.Size = new System.Drawing.Size(100, 22);
+            this.OverviewClientPortTextBox.TabIndex = 5;
             // 
             // label47
             // 
@@ -537,11 +571,11 @@
             // 
             // OverviewClientIPTextBox
             // 
-            OverviewClientIPTextBox.Location = new System.Drawing.Point(189, 107);
-            OverviewClientIPTextBox.Name = "OverviewClientIPTextBox";
-            OverviewClientIPTextBox.ReadOnly = true;
-            OverviewClientIPTextBox.Size = new System.Drawing.Size(100, 22);
-            OverviewClientIPTextBox.TabIndex = 1;
+            this.OverviewClientIPTextBox.Location = new System.Drawing.Point(189, 107);
+            this.OverviewClientIPTextBox.Name = "OverviewClientIPTextBox";
+            this.OverviewClientIPTextBox.ReadOnly = true;
+            this.OverviewClientIPTextBox.Size = new System.Drawing.Size(100, 22);
+            this.OverviewClientIPTextBox.TabIndex = 1;
             // 
             // label50
             // 
@@ -555,12 +589,12 @@
             // 
             // ValuesPanel
             // 
-            this.ValuesPanel.Controls.Add(ValuesMessageTextBox);
+            this.ValuesPanel.Controls.Add(this.ValuesMessageTextBox);
             this.ValuesPanel.Controls.Add(this.label5);
             this.ValuesPanel.Controls.Add(this.StartButton);
             this.ValuesPanel.Controls.Add(this.ValuesGenerateButton);
-            this.ValuesPanel.Controls.Add(MaxKeyValueTextBox);
-            this.ValuesPanel.Controls.Add(MinKeyValueTextBox);
+            this.ValuesPanel.Controls.Add(this.MaxKeyValueTextBox);
+            this.ValuesPanel.Controls.Add(this.MinKeyValueTextBox);
             this.ValuesPanel.Controls.Add(this.label4);
             this.ValuesPanel.Controls.Add(this.label3);
             this.ValuesPanel.Controls.Add(this.label2);
@@ -572,10 +606,10 @@
             // 
             // ValuesMessageTextBox
             // 
-            ValuesMessageTextBox.Location = new System.Drawing.Point(401, 140);
-            ValuesMessageTextBox.Name = "ValuesMessageTextBox";
-            ValuesMessageTextBox.Size = new System.Drawing.Size(321, 22);
-            ValuesMessageTextBox.TabIndex = 9;
+            this.ValuesMessageTextBox.Location = new System.Drawing.Point(401, 140);
+            this.ValuesMessageTextBox.Name = "ValuesMessageTextBox";
+            this.ValuesMessageTextBox.Size = new System.Drawing.Size(321, 22);
+            this.ValuesMessageTextBox.TabIndex = 9;
             // 
             // label5
             // 
@@ -609,17 +643,17 @@
             // 
             // MaxKeyValueTextBox
             // 
-            MaxKeyValueTextBox.Location = new System.Drawing.Point(216, 179);
-            MaxKeyValueTextBox.Name = "MaxKeyValueTextBox";
-            MaxKeyValueTextBox.Size = new System.Drawing.Size(100, 22);
-            MaxKeyValueTextBox.TabIndex = 5;
+            this.MaxKeyValueTextBox.Location = new System.Drawing.Point(216, 179);
+            this.MaxKeyValueTextBox.Name = "MaxKeyValueTextBox";
+            this.MaxKeyValueTextBox.Size = new System.Drawing.Size(100, 22);
+            this.MaxKeyValueTextBox.TabIndex = 5;
             // 
             // MinKeyValueTextBox
             // 
-            MinKeyValueTextBox.Location = new System.Drawing.Point(216, 145);
-            MinKeyValueTextBox.Name = "MinKeyValueTextBox";
-            MinKeyValueTextBox.Size = new System.Drawing.Size(100, 22);
-            MinKeyValueTextBox.TabIndex = 4;
+            this.MinKeyValueTextBox.Location = new System.Drawing.Point(216, 145);
+            this.MinKeyValueTextBox.Name = "MinKeyValueTextBox";
+            this.MinKeyValueTextBox.Size = new System.Drawing.Size(100, 22);
+            this.MinKeyValueTextBox.TabIndex = 4;
             // 
             // label4
             // 
@@ -661,11 +695,11 @@
             // 
             // NetworkPanel
             // 
-            this.NetworkPanel.Controls.Add(NetworkServerTextBox);
-            this.NetworkPanel.Controls.Add(NetworkClientTextBox);
-            this.NetworkPanel.Controls.Add(NetworkPortTextBox);
-            this.NetworkPanel.Controls.Add(ServerCheckBox);
-            this.NetworkPanel.Controls.Add(ClientCheckBox);
+            this.NetworkPanel.Controls.Add(this.NetworkServerTextBox);
+            this.NetworkPanel.Controls.Add(this.NetworkClientTextBox);
+            this.NetworkPanel.Controls.Add(this.NetworkPortTextBox);
+            this.NetworkPanel.Controls.Add(this.ServerCheckBox);
+            this.NetworkPanel.Controls.Add(this.ClientCheckBox);
             this.NetworkPanel.Controls.Add(this.label7);
             this.NetworkPanel.Controls.Add(this.label6);
             this.NetworkPanel.Location = new System.Drawing.Point(156, 0);
@@ -675,44 +709,44 @@
             // 
             // NetworkServerTextBox
             // 
-            NetworkServerTextBox.Location = new System.Drawing.Point(385, 161);
-            NetworkServerTextBox.Name = "NetworkServerTextBox";
-            NetworkServerTextBox.Size = new System.Drawing.Size(243, 22);
-            NetworkServerTextBox.TabIndex = 6;
+            this.NetworkServerTextBox.Location = new System.Drawing.Point(385, 161);
+            this.NetworkServerTextBox.Name = "NetworkServerTextBox";
+            this.NetworkServerTextBox.Size = new System.Drawing.Size(243, 22);
+            this.NetworkServerTextBox.TabIndex = 6;
             // 
             // NetworkClientTextBox
             // 
-            NetworkClientTextBox.Location = new System.Drawing.Point(385, 127);
-            NetworkClientTextBox.Name = "NetworkClientTextBox";
-            NetworkClientTextBox.Size = new System.Drawing.Size(243, 22);
-            NetworkClientTextBox.TabIndex = 5;
+            this.NetworkClientTextBox.Location = new System.Drawing.Point(385, 127);
+            this.NetworkClientTextBox.Name = "NetworkClientTextBox";
+            this.NetworkClientTextBox.Size = new System.Drawing.Size(243, 22);
+            this.NetworkClientTextBox.TabIndex = 5;
             // 
             // NetworkPortTextBox
             // 
-            NetworkPortTextBox.Location = new System.Drawing.Point(385, 93);
-            NetworkPortTextBox.Name = "NetworkPortTextBox";
-            NetworkPortTextBox.Size = new System.Drawing.Size(243, 22);
-            NetworkPortTextBox.TabIndex = 4;
+            this.NetworkPortTextBox.Location = new System.Drawing.Point(385, 93);
+            this.NetworkPortTextBox.Name = "NetworkPortTextBox";
+            this.NetworkPortTextBox.Size = new System.Drawing.Size(243, 22);
+            this.NetworkPortTextBox.TabIndex = 4;
             // 
             // ServerCheckBox
             // 
-            ServerCheckBox.AutoSize = true;
-            ServerCheckBox.Location = new System.Drawing.Point(135, 161);
-            ServerCheckBox.Name = "ServerCheckBox";
-            ServerCheckBox.Size = new System.Drawing.Size(144, 21);
-            ServerCheckBox.TabIndex = 3;
-            ServerCheckBox.Text = "Server IP Address";
-            ServerCheckBox.UseVisualStyleBackColor = true;
+            this.ServerCheckBox.AutoSize = true;
+            this.ServerCheckBox.Location = new System.Drawing.Point(135, 161);
+            this.ServerCheckBox.Name = "ServerCheckBox";
+            this.ServerCheckBox.Size = new System.Drawing.Size(144, 21);
+            this.ServerCheckBox.TabIndex = 3;
+            this.ServerCheckBox.Text = "Server IP Address";
+            this.ServerCheckBox.UseVisualStyleBackColor = true;
             // 
             // ClientCheckBox
             // 
-            ClientCheckBox.AutoSize = true;
-            ClientCheckBox.Location = new System.Drawing.Point(135, 125);
-            ClientCheckBox.Name = "ClientCheckBox";
-            ClientCheckBox.Size = new System.Drawing.Size(137, 21);
-            ClientCheckBox.TabIndex = 2;
-            ClientCheckBox.Text = "Client IP Address";
-            ClientCheckBox.UseVisualStyleBackColor = true;
+            this.ClientCheckBox.AutoSize = true;
+            this.ClientCheckBox.Location = new System.Drawing.Point(135, 125);
+            this.ClientCheckBox.Name = "ClientCheckBox";
+            this.ClientCheckBox.Size = new System.Drawing.Size(137, 21);
+            this.ClientCheckBox.TabIndex = 2;
+            this.ClientCheckBox.Text = "Client IP Address";
+            this.ClientCheckBox.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -732,38 +766,6 @@
             this.label6.Size = new System.Drawing.Size(118, 32);
             this.label6.TabIndex = 0;
             this.label6.Text = "Network";
-            // 
-            // OverviewClientPubKeyTextBox
-            // 
-            OverviewClientPubKeyTextBox.Location = new System.Drawing.Point(189, 186);
-            OverviewClientPubKeyTextBox.Name = "OverviewClientPubKeyTextBox";
-            OverviewClientPubKeyTextBox.ReadOnly = true;
-            OverviewClientPubKeyTextBox.Size = new System.Drawing.Size(100, 22);
-            OverviewClientPubKeyTextBox.TabIndex = 32;
-            // 
-            // OverviewClientPrivKeyTextBox
-            // 
-            OverviewClientPrivKeyTextBox.Location = new System.Drawing.Point(189, 223);
-            OverviewClientPrivKeyTextBox.Name = "OverviewClientPrivKeyTextBox";
-            OverviewClientPrivKeyTextBox.ReadOnly = true;
-            OverviewClientPrivKeyTextBox.Size = new System.Drawing.Size(100, 22);
-            OverviewClientPrivKeyTextBox.TabIndex = 33;
-            // 
-            // OverviewServerPubKeyTextBox
-            // 
-            OverviewServerPubKeyTextBox.Location = new System.Drawing.Point(634, 185);
-            OverviewServerPubKeyTextBox.Name = "OverviewServerPubKeyTextBox";
-            OverviewServerPubKeyTextBox.ReadOnly = true;
-            OverviewServerPubKeyTextBox.Size = new System.Drawing.Size(100, 22);
-            OverviewServerPubKeyTextBox.TabIndex = 34;
-            // 
-            // OverviewServerPrivKeyTextBox
-            // 
-            OverviewServerPrivKeyTextBox.Location = new System.Drawing.Point(634, 223);
-            OverviewServerPrivKeyTextBox.Name = "OverviewServerPrivKeyTextBox";
-            OverviewServerPrivKeyTextBox.ReadOnly = true;
-            OverviewServerPrivKeyTextBox.Size = new System.Drawing.Size(100, 22);
-            OverviewServerPrivKeyTextBox.TabIndex = 35;
             // 
             // RSAEncryption
             // 
@@ -800,22 +802,17 @@
         private System.Windows.Forms.Button EavesdropperButton;
         private System.Windows.Forms.Panel EavesdropperPanel;
         private System.Windows.Forms.Button EavesdropperGoButton;
-        private static System.Windows.Forms.TextBox EavesdropperMessageTextBox;
         private System.Windows.Forms.Label label25;
-        private static System.Windows.Forms.TextBox EavesdropperServerPrivateKeyBTextBox;
-        private static System.Windows.Forms.TextBox EavesdropperServerPrivateKeyATextBox;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private static System.Windows.Forms.TextBox EavesdropperClientPrivateKeyBTextBox;
-        private static System.Windows.Forms.TextBox EavesdropperClientPrivateKeyATextBox;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel OverviewPanel;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.Button PrevButton;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
@@ -825,19 +822,15 @@
         private static System.Windows.Forms.TextBox OverviewServerPublicKeyTextBox;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
-        private static System.Windows.Forms.TextBox OverviewServerPortTextBox;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
-        private static System.Windows.Forms.TextBox OverviewServerIPTextBox;
         private static System.Windows.Forms.TextBox OverviewClientPrivateKeyTextBox;
         private static System.Windows.Forms.TextBox OverviewClientPublicKeyTextBox;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
-        private static System.Windows.Forms.TextBox OverviewClientPortTextBox;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;
-        private static System.Windows.Forms.TextBox OverviewClientIPTextBox;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Panel ValuesPanel;
         private System.Windows.Forms.Label label5;
@@ -850,21 +843,30 @@
         private System.Windows.Forms.Panel NetworkPanel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private static System.Windows.Forms.TextBox MaxKeyValueTextBox;
-        private static System.Windows.Forms.TextBox MinKeyValueTextBox;
-        private static System.Windows.Forms.CheckBox ServerCheckBox;
-        private static System.Windows.Forms.CheckBox ClientCheckBox;
-        private static System.Windows.Forms.TextBox OverviewMessageTextBox;
-        private static System.Windows.Forms.TextBox OverviewToTextBox;
-        private static System.Windows.Forms.TextBox OverviewFromTextBox;
-        private static System.Windows.Forms.TextBox ValuesMessageTextBox;
-        private static System.Windows.Forms.TextBox NetworkServerTextBox;
-        private static System.Windows.Forms.TextBox NetworkClientTextBox;
-        private static System.Windows.Forms.TextBox NetworkPortTextBox;
-        private static System.Windows.Forms.TextBox OverviewServerPrivKeyTextBox;
-        private static System.Windows.Forms.TextBox OverviewServerPubKeyTextBox;
-        private static System.Windows.Forms.TextBox OverviewClientPrivKeyTextBox;
-        private static System.Windows.Forms.TextBox OverviewClientPubKeyTextBox;
+        private System.Windows.Forms.TextBox EavesdropperMessageTextBox;
+        private System.Windows.Forms.TextBox EavesdropperServerPrivateKeyBTextBox;
+        private System.Windows.Forms.TextBox EavesdropperServerPrivateKeyATextBox;
+        private System.Windows.Forms.TextBox EavesdropperClientPrivateKeyBTextBox;
+        private System.Windows.Forms.TextBox EavesdropperClientPrivateKeyATextBox;
+        private System.Windows.Forms.TextBox OverviewServerPortTextBox;
+        private System.Windows.Forms.TextBox OverviewServerIPTextBox;
+        private System.Windows.Forms.TextBox OverviewClientPortTextBox;
+        private System.Windows.Forms.TextBox OverviewClientIPTextBox;
+        private System.Windows.Forms.TextBox MaxKeyValueTextBox;
+        private System.Windows.Forms.TextBox MinKeyValueTextBox;
+        private System.Windows.Forms.CheckBox ServerCheckBox;
+        private System.Windows.Forms.CheckBox ClientCheckBox;
+        private System.Windows.Forms.TextBox OverviewMessageTextBox;
+        private System.Windows.Forms.TextBox OverviewToTextBox;
+        private System.Windows.Forms.TextBox OverviewFromTextBox;
+        private System.Windows.Forms.TextBox ValuesMessageTextBox;
+        private System.Windows.Forms.TextBox NetworkServerTextBox;
+        private System.Windows.Forms.TextBox NetworkClientTextBox;
+        private System.Windows.Forms.TextBox NetworkPortTextBox;
+        private System.Windows.Forms.TextBox OverviewServerPrivKeyTextBox;
+        private System.Windows.Forms.TextBox OverviewServerPubKeyTextBox;
+        private System.Windows.Forms.TextBox OverviewClientPrivKeyTextBox;
+        private System.Windows.Forms.TextBox OverviewClientPubKeyTextBox;
     }
 }
 

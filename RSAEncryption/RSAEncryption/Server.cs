@@ -11,22 +11,18 @@ namespace RSAEncryption
 {
     class Server : SendingComputer
     {
-        string message = "";
+
+        public string message = "";
         public void SetData( int max, int min)
         {
             GenerateKey( max, min);
-            RSAEncryption.SetServerKeys(_publicKey, _computedPrivateKey);
         }
 
-        public void StartServer()
+        public Thread StartServer()
         {
-            string  ipAddress;
-            int port;
-            port = RSAEncryption.getPort();
-            ipAddress = RSAEncryption.GetServerIP();
-            Thread t = new Thread(() => StartServer(ipAddress, port));
+            Thread t = new Thread(() => StartServer(_ipAddress, _port));
             t.Start();
-            RSAEncryption.SetOverviewMessage(message);
+            return t;
         }
 
         private void StartServer(string ipAddress, int port)
@@ -36,22 +32,34 @@ namespace RSAEncryption
             bool res = IPAddress.TryParse(ipAddress, out ip);
             if (!res)
                 ip = IPAddress.Loopback;
-            if (port < 0 || port > 7000)
-                port = 6969;
             TcpListener myListener = new TcpListener(ip, port);
 
             myListener.Start();
 
             Socket s = myListener.AcceptSocket();
 
+            Messages[0] = new Message();
+            Messages[0].Text = _publicKey.ToString() + " " + _coPrimeNumber + " " + _privateKeyA + " " + _privateKeyB;
+            Messages[0].FromIP = ip.ToString();
+
             s.Send(ascii.GetBytes(_publicKey.ToString()));
+            s.Send(ascii.GetBytes(_coPrimeNumber.ToString()));
+
 
             byte[] b = new byte[10000];
 
             int i = s.Receive(b);
-            for (int k = 0; k < i; k++)
-                message += Convert.ToChar(b[k]);
 
+            message = RSAEncryptor.Decrypt(b, _publicKey, _computedPrivateKey, i);
+
+            Messages[1] = new Message();
+            Messages[1].Text = message;
+            Messages[1].ToIP = ip.ToString();
+
+
+            Messages[2] = new Message();
+            Messages[2].Text = message;
+            Messages[2].ToIP = ip.ToString();
 
             s.Close();
             myListener.Stop();

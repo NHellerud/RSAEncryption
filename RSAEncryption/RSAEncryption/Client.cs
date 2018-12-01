@@ -12,24 +12,32 @@ namespace RSAEncryption
 {
     class Client : SendingComputer
     {
-        int ServerPublicKey;
+        private int _serverPublicKey;
+        private int _serverConstant;
+        private string _message;
+
+        public string Message
+        {
+            get
+            {
+                return _message;
+            }
+            set
+            {
+                _message = value;
+            }
+        }
 
         public void SetData( int max, int min)
         {
             GenerateKey( max, min);
-            RSAEncryption.SetClientKeys(_publicKey, _computedPrivateKey);
         }
 
-        public void StartClient()
+        public Thread StartClient()
         {
-            string message, ipAddress;
-            int port;
-            port = RSAEncryption.getPort();
-            message = RSAEncryption.GetMessage();
-            ipAddress = RSAEncryption.GetServerIP();
-            Thread t = new Thread(() => StartClient(ipAddress, port, message));
+            Thread t = new Thread(() => StartClient(_ipAddress, _port, _message));
             t.Start();
-            RSAEncryption.SetOverviewFrom(ServerPublicKey.ToString());
+            return t;
         }
         private void StartClient(string ipAddress, int port, string message)
         {
@@ -38,9 +46,6 @@ namespace RSAEncryption
             IPAddress ip;
             if (!IPAddress.TryParse(ipAddress, out ip))
                 ip = IPAddress.Loopback;
-
-            if (port < 0 || port > 7000)
-                port = 6969;
 
             tcpclient.Connect(ip, port);
 
@@ -53,11 +58,44 @@ namespace RSAEncryption
 
             for (int k = 0; k < i; k++)
                 temp += Convert.ToChar(b[k]);
-            ServerPublicKey = Int32.Parse(temp);
+            _serverPublicKey = Int32.Parse(temp);
+
+            temp = "";
+            b = new byte[100];
+            i = stm.Read(b, 0, 100);
+
+            for (int k = 0; k < i; k++)
+                temp += Convert.ToChar(b[k]);
+            _serverConstant = Int32.Parse(temp);
+
+            Messages[0] = new Message();
+            Messages[0].Text = _serverPublicKey.ToString() + " " + _serverConstant.ToString();
+            Messages[0].FromIP = ip.ToString();
+            Messages[0].ToIP = _ipAddress;
+
+            Messages[1] = new Message();
+            Messages[1].Text = message;
+            Messages[1].ToIP = ip.ToString();
+            Messages[1].FromIP = _ipAddress;
+
+            byte[] encrypt = RSAEncryptor.Encrypt(message, _serverPublicKey, _serverConstant);
+
+            temp = "";
+            Byte[] bytes = new Byte[4];
+            for (int k = 0; k < encrypt.Length; k += 4)
+            {
+                
+                temp += BitConverter.ToInt32(encrypt, k).ToString() + " ";
+            }
+
+            Messages[2] = new Message();
+            Messages[2].Text = temp;
+            Messages[2].ToIP = ip.ToString();
+            Messages[2].FromIP = _ipAddress;
 
             ASCIIEncoding ascii = new ASCIIEncoding();
-            byte[] messageBytes = ascii.GetBytes(message);
-            stm.Write(messageBytes, 0, messageBytes.Length);
+   
+            stm.Write(encrypt, 0, encrypt.Length);
 
             tcpclient.Close();
         }
