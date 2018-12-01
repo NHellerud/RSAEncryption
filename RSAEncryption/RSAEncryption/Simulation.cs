@@ -25,6 +25,13 @@ namespace RSAEncryption
             server.SetData( max, min);
         }
 
+        public void Start()
+        {
+            server.StartServer();
+            client.StartClient();
+
+        }
+
 
     }
 }

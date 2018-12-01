@@ -54,14 +54,59 @@ namespace RSAEncryption
      
         public static void SetClientKeys(int PublicKey, int PrivateKey)
         {
-            OverviewClientPublicKeyTextBox.Text = PublicKey.ToString();
-            OverviewClientPrivateKeyTextBox.Text = PrivateKey.ToString();
+            OverviewClientPubKeyTextBox.Text = PublicKey.ToString();
+            OverviewClientPrivKeyTextBox.Text = PrivateKey.ToString();
         }
 
         public static void SetServerKeys(int PublicKey, int PrivateKey)
         {
-            OverviewServerPublicKeyTextBox.Text = PublicKey.ToString();
-            OverviewServerPrivateKeyTextBox.Text = PrivateKey.ToString();
+            OverviewServerPubKeyTextBox.Text = PublicKey.ToString();
+            OverviewServerPrivKeyTextBox.Text = PrivateKey.ToString();
+        }
+
+        public static int getPort()
+        {
+            int port;
+            if(!Int32.TryParse(NetworkPortTextBox.Text, out port))
+            {
+                return 6969;
+            }
+            return port;
+        }
+
+        public static string GetClientIP()
+        {
+            return NetworkClientTextBox.Text;
+        }
+
+        public static string GetServerIP()
+        {
+            return NetworkServerTextBox.Text;
+        }
+
+        public static string GetMessage()
+        {
+            return ValuesMessageTextBox.Text;
+        }
+
+        public static void SetOverviewTo(string s)
+        {
+            OverviewToTextBox.Text = s;
+        }
+
+        public static void SetOverviewFrom(string s)
+        {
+            OverviewFromTextBox.Text = s;
+        }
+
+        public static void SetOverviewMessage(string s)
+        {
+            OverviewMessageTextBox.Text = s;
+        }
+
+        private void StartButton_Click(object sender, EventArgs e)
+        {
+            simulation.Start();
         }
     }
 }

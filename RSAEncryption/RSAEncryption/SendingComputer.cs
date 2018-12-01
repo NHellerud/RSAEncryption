@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RSAEncryption
 {
-    class SendingComputer : Computer
+    class SendingComputer
     {
         protected int _privateKeyA;
         protected int _privateKeyB;
