@@ -89,6 +89,14 @@ namespace RSAEncryption
             }
         }
 
+        public int CoPrime
+        {
+            get
+            {
+                return _coPrimeNumber;
+            }
+        }
+
         public Message[] Messages
         {
             get
@@ -103,12 +111,13 @@ namespace RSAEncryption
 
         public void GenerateKey( int max, int min)
         {
-            _privateKeyA = PrimeNumber.returnPrime(min, max);
-            _privateKeyB = PrimeNumber.returnPrime(min, max);
+            PrimeNumber primeNumber = new PrimeNumber();
+            _privateKeyA = primeNumber.returnPrime(min, max);
+            _privateKeyB = primeNumber.returnPrime(min, max);
             _publicKey = RSAEncryptor.GeneratePublicKey(_privateKeyA, _privateKeyB);
             int x = RSAEncryptor.LeastCommonMultiple(_privateKeyA, _privateKeyB);
             _coPrimeNumber = RSAEncryptor.GenerateCoPrime( _privateKeyA, _privateKeyB, x);
-            _computedPrivateKey = RSAEncryptor.GeneratePrivateKey(_privateKeyA, _privateKeyB, _coPrimeNumber, x);
+            _computedPrivateKey = RSAEncryptor.GeneratePrivateKey( _coPrimeNumber, x);
         }
 
     }

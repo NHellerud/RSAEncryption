@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RSAEncryption
 {
@@ -52,36 +48,37 @@ namespace RSAEncryption
 
        
 
-        public static int GeneratePublicKey(int KeyA, int KeyB)
+        public static int GeneratePublicKey(int keyA, int keyB)
         {
-            return KeyA * KeyB;
+            return keyA * keyB;
         }
 
-        public static int LeastCommonMultiple( int KeyA, int KeyB)
+        public static int LeastCommonMultiple( int keyA, int keyB)
         {
             int x, y, z;
-            x = KeyA - 1;
-            y = KeyB - 1;
+            x = keyA - 1;
+            y = keyB - 1;
             z = x * 2;
             while (z % y != 0)
                 z += x;
             return z;
         }
 
-        public static int GenerateCoPrime(int KeyA, int KeyB, int lcm)
-        { 
-            int coprime = PrimeNumber.returnPrime(1, lcm);
+        public static int GenerateCoPrime(int keyA, int keyB, int lcm)
+        {
+            PrimeNumber primeNumber = new PrimeNumber();
+            int coprime = primeNumber.returnPrime(1, lcm);
             while (lcm % coprime == 0)
-                coprime = PrimeNumber.returnPrime(1, lcm);
+                coprime = primeNumber.returnPrime(1, lcm);
             return coprime;
         }
 
-        public static int GeneratePrivateKey(int KeyA, int KeyB, int Coprime, int lcm)
+        public static int GeneratePrivateKey( int coprime, int lcm)
         {
-            int i = 1;
-            while ((i * Coprime) % lcm != 1)
-                i++;
-            return i;
+            int num = 1;
+            while ((num * coprime) % lcm != 1)
+                num++;
+            return num;
         }
 
     }

@@ -12,7 +12,17 @@ namespace RSAEncryption
     class Server : SendingComputer
     {
 
-        public string message = "";
+        private string _message = "";
+        private byte[] _encryptedData;
+
+        public byte[] EncryptedData
+        {
+            get
+            {
+                return _encryptedData;
+            }
+        }
+
         public void SetData( int max, int min)
         {
             GenerateKey( max, min);
@@ -38,9 +48,13 @@ namespace RSAEncryption
 
             Socket s = myListener.AcceptSocket();
 
+            IPEndPoint remoteEndPoint = s.RemoteEndPoint as IPEndPoint;
+            string clientIP = remoteEndPoint.Address.ToString();
+
             Messages[0] = new Message();
-            Messages[0].Text = _publicKey.ToString() + " " + _coPrimeNumber + " " + _privateKeyA + " " + _privateKeyB;
+            Messages[0].Text = _publicKey.ToString() + " " + _coPrimeNumber.ToString();
             Messages[0].FromIP = ip.ToString();
+            Messages[0].ToIP = clientIP + " Client";
 
             s.Send(ascii.GetBytes(_publicKey.ToString()));
             s.Send(ascii.GetBytes(_coPrimeNumber.ToString()));
@@ -50,16 +64,31 @@ namespace RSAEncryption
 
             int i = s.Receive(b);
 
-            message = RSAEncryptor.Decrypt(b, _publicKey, _computedPrivateKey, i);
+            byte[] transfer = new byte[i];
+            for (int k = 0; k < i; k++)
+                transfer[k] = b[k];
+            _encryptedData = transfer;
+
+            string temp = "";
+            Byte[] bytes = new Byte[4];
+            for (int k = 0; k < i; k += 4)
+            {
+
+                temp += BitConverter.ToInt32(b, k).ToString() + " ";
+            }
 
             Messages[1] = new Message();
-            Messages[1].Text = message;
-            Messages[1].ToIP = ip.ToString();
+            Messages[1].Text = temp;
+            Messages[1].FromIP = ip.ToString() + " Client";
+            Messages[1].ToIP = clientIP;
 
+            _message = RSAEncryptor.Decrypt(b, _publicKey, _computedPrivateKey, i);
 
+            
             Messages[2] = new Message();
-            Messages[2].Text = message;
-            Messages[2].ToIP = ip.ToString();
+            Messages[2].Text = _message;
+            Messages[2].FromIP = ip.ToString() + " Client";
+            Messages[2].ToIP = clientIP;
 
             s.Close();
             myListener.Stop();

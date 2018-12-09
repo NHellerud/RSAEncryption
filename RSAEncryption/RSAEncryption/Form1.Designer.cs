@@ -35,14 +35,12 @@
             this.EavesdropperButton = new System.Windows.Forms.Button();
             this.EavesdropperPanel = new System.Windows.Forms.Panel();
             this.EavesdropperGoButton = new System.Windows.Forms.Button();
-            this.EavesdropperMessageTextBox = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.EavesdropperServerPrivateKeyBTextBox = new System.Windows.Forms.TextBox();
-            this.EavesdropperServerPrivateKeyATextBox = new System.Windows.Forms.TextBox();
+            this.EavesdropperServerPrivateKeyTextBox = new System.Windows.Forms.TextBox();
+            this.EavesdropperServerPublicKeyTextBox = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.EavesdropperClientPrivateKeyBTextBox = new System.Windows.Forms.TextBox();
-            this.EavesdropperClientPrivateKeyATextBox = new System.Windows.Forms.TextBox();
+            this.EavesdropperClientPrivateKeyTextBox = new System.Windows.Forms.TextBox();
+            this.EavesdropperClientPublicKeyTextBox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -96,6 +94,8 @@
             this.ClientCheckBox = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.EavesdropperMessageTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.EavesdropperPanel.SuspendLayout();
             this.OverviewPanel.SuspendLayout();
@@ -161,15 +161,15 @@
             // 
             // EavesdropperPanel
             // 
-            this.EavesdropperPanel.Controls.Add(this.EavesdropperGoButton);
             this.EavesdropperPanel.Controls.Add(this.EavesdropperMessageTextBox);
-            this.EavesdropperPanel.Controls.Add(this.label25);
-            this.EavesdropperPanel.Controls.Add(this.EavesdropperServerPrivateKeyBTextBox);
-            this.EavesdropperPanel.Controls.Add(this.EavesdropperServerPrivateKeyATextBox);
+            this.EavesdropperPanel.Controls.Add(this.label8);
+            this.EavesdropperPanel.Controls.Add(this.EavesdropperGoButton);
+            this.EavesdropperPanel.Controls.Add(this.EavesdropperServerPrivateKeyTextBox);
+            this.EavesdropperPanel.Controls.Add(this.EavesdropperServerPublicKeyTextBox);
             this.EavesdropperPanel.Controls.Add(this.label23);
             this.EavesdropperPanel.Controls.Add(this.label24);
-            this.EavesdropperPanel.Controls.Add(this.EavesdropperClientPrivateKeyBTextBox);
-            this.EavesdropperPanel.Controls.Add(this.EavesdropperClientPrivateKeyATextBox);
+            this.EavesdropperPanel.Controls.Add(this.EavesdropperClientPrivateKeyTextBox);
+            this.EavesdropperPanel.Controls.Add(this.EavesdropperClientPublicKeyTextBox);
             this.EavesdropperPanel.Controls.Add(this.label22);
             this.EavesdropperPanel.Controls.Add(this.label21);
             this.EavesdropperPanel.Controls.Add(this.label20);
@@ -188,92 +188,75 @@
             this.EavesdropperGoButton.TabIndex = 13;
             this.EavesdropperGoButton.Text = "Go";
             this.EavesdropperGoButton.UseVisualStyleBackColor = true;
+            this.EavesdropperGoButton.Click += new System.EventHandler(this.EavesdropperGoButton_Click);
             // 
-            // EavesdropperMessageTextBox
+            // EavesdropperServerPrivateKeyTextBox
             // 
-            this.EavesdropperMessageTextBox.Location = new System.Drawing.Point(320, 339);
-            this.EavesdropperMessageTextBox.Name = "EavesdropperMessageTextBox";
-            this.EavesdropperMessageTextBox.ReadOnly = true;
-            this.EavesdropperMessageTextBox.Size = new System.Drawing.Size(100, 22);
-            this.EavesdropperMessageTextBox.TabIndex = 12;
+            this.EavesdropperServerPrivateKeyTextBox.Location = new System.Drawing.Point(511, 200);
+            this.EavesdropperServerPrivateKeyTextBox.Name = "EavesdropperServerPrivateKeyTextBox";
+            this.EavesdropperServerPrivateKeyTextBox.ReadOnly = true;
+            this.EavesdropperServerPrivateKeyTextBox.Size = new System.Drawing.Size(100, 22);
+            this.EavesdropperServerPrivateKeyTextBox.TabIndex = 10;
             // 
-            // label25
+            // EavesdropperServerPublicKeyTextBox
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(325, 305);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(93, 25);
-            this.label25.TabIndex = 11;
-            this.label25.Text = "Message";
-            // 
-            // EavesdropperServerPrivateKeyBTextBox
-            // 
-            this.EavesdropperServerPrivateKeyBTextBox.Location = new System.Drawing.Point(511, 200);
-            this.EavesdropperServerPrivateKeyBTextBox.Name = "EavesdropperServerPrivateKeyBTextBox";
-            this.EavesdropperServerPrivateKeyBTextBox.ReadOnly = true;
-            this.EavesdropperServerPrivateKeyBTextBox.Size = new System.Drawing.Size(100, 22);
-            this.EavesdropperServerPrivateKeyBTextBox.TabIndex = 10;
-            // 
-            // EavesdropperServerPrivateKeyATextBox
-            // 
-            this.EavesdropperServerPrivateKeyATextBox.Location = new System.Drawing.Point(511, 162);
-            this.EavesdropperServerPrivateKeyATextBox.Name = "EavesdropperServerPrivateKeyATextBox";
-            this.EavesdropperServerPrivateKeyATextBox.ReadOnly = true;
-            this.EavesdropperServerPrivateKeyATextBox.Size = new System.Drawing.Size(100, 22);
-            this.EavesdropperServerPrivateKeyATextBox.TabIndex = 9;
+            this.EavesdropperServerPublicKeyTextBox.Location = new System.Drawing.Point(511, 162);
+            this.EavesdropperServerPublicKeyTextBox.Name = "EavesdropperServerPublicKeyTextBox";
+            this.EavesdropperServerPublicKeyTextBox.ReadOnly = true;
+            this.EavesdropperServerPublicKeyTextBox.Size = new System.Drawing.Size(100, 22);
+            this.EavesdropperServerPublicKeyTextBox.TabIndex = 9;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(398, 202);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(93, 17);
+            this.label23.Size = new System.Drawing.Size(80, 17);
             this.label23.TabIndex = 8;
-            this.label23.Text = "Private Key B";
+            this.label23.Text = "Private Key";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(398, 165);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(93, 17);
+            this.label24.Size = new System.Drawing.Size(74, 17);
             this.label24.TabIndex = 7;
-            this.label24.Text = "Private Key A";
+            this.label24.Text = "Public Key";
             // 
-            // EavesdropperClientPrivateKeyBTextBox
+            // EavesdropperClientPrivateKeyTextBox
             // 
-            this.EavesdropperClientPrivateKeyBTextBox.Location = new System.Drawing.Point(216, 200);
-            this.EavesdropperClientPrivateKeyBTextBox.Name = "EavesdropperClientPrivateKeyBTextBox";
-            this.EavesdropperClientPrivateKeyBTextBox.ReadOnly = true;
-            this.EavesdropperClientPrivateKeyBTextBox.Size = new System.Drawing.Size(100, 22);
-            this.EavesdropperClientPrivateKeyBTextBox.TabIndex = 6;
+            this.EavesdropperClientPrivateKeyTextBox.Location = new System.Drawing.Point(216, 200);
+            this.EavesdropperClientPrivateKeyTextBox.Name = "EavesdropperClientPrivateKeyTextBox";
+            this.EavesdropperClientPrivateKeyTextBox.ReadOnly = true;
+            this.EavesdropperClientPrivateKeyTextBox.Size = new System.Drawing.Size(100, 22);
+            this.EavesdropperClientPrivateKeyTextBox.TabIndex = 6;
             // 
-            // EavesdropperClientPrivateKeyATextBox
+            // EavesdropperClientPublicKeyTextBox
             // 
-            this.EavesdropperClientPrivateKeyATextBox.Location = new System.Drawing.Point(216, 162);
-            this.EavesdropperClientPrivateKeyATextBox.Name = "EavesdropperClientPrivateKeyATextBox";
-            this.EavesdropperClientPrivateKeyATextBox.ReadOnly = true;
-            this.EavesdropperClientPrivateKeyATextBox.Size = new System.Drawing.Size(100, 22);
-            this.EavesdropperClientPrivateKeyATextBox.TabIndex = 5;
+            this.EavesdropperClientPublicKeyTextBox.Location = new System.Drawing.Point(216, 162);
+            this.EavesdropperClientPublicKeyTextBox.Name = "EavesdropperClientPublicKeyTextBox";
+            this.EavesdropperClientPublicKeyTextBox.ReadOnly = true;
+            this.EavesdropperClientPublicKeyTextBox.Size = new System.Drawing.Size(100, 22);
+            this.EavesdropperClientPublicKeyTextBox.TabIndex = 5;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(103, 202);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(93, 17);
+            this.label22.Size = new System.Drawing.Size(80, 17);
             this.label22.TabIndex = 4;
-            this.label22.Text = "Private Key B";
+            this.label22.Text = "Private Key";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(103, 165);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(93, 17);
+            this.label21.Size = new System.Drawing.Size(74, 17);
             this.label21.TabIndex = 3;
-            this.label21.Text = "Private Key A";
+            this.label21.Text = "Public Key";
             // 
             // label20
             // 
@@ -380,7 +363,7 @@
             this.NextButton.TabIndex = 31;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
-            this.NextButton.Click += new System.EventHandler(this.button2_Click);
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // PrevButton
             // 
@@ -390,11 +373,11 @@
             this.PrevButton.TabIndex = 30;
             this.PrevButton.Text = "Prev";
             this.PrevButton.UseVisualStyleBackColor = true;
-            this.PrevButton.Click += new System.EventHandler(this.button3_Click);
+            this.PrevButton.Click += new System.EventHandler(this.PrevButton_Click);
             // 
             // OverviewMessageTextBox
             // 
-            this.OverviewMessageTextBox.Location = new System.Drawing.Point(257, 403);
+            this.OverviewMessageTextBox.Location = new System.Drawing.Point(192, 409);
             this.OverviewMessageTextBox.Name = "OverviewMessageTextBox";
             this.OverviewMessageTextBox.ReadOnly = true;
             this.OverviewMessageTextBox.Size = new System.Drawing.Size(354, 22);
@@ -403,7 +386,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(186, 406);
+            this.label34.Location = new System.Drawing.Point(121, 412);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(65, 17);
             this.label34.TabIndex = 28;
@@ -411,24 +394,24 @@
             // 
             // OverviewToTextBox
             // 
-            this.OverviewToTextBox.Location = new System.Drawing.Point(401, 361);
+            this.OverviewToTextBox.Location = new System.Drawing.Point(381, 370);
             this.OverviewToTextBox.Name = "OverviewToTextBox";
             this.OverviewToTextBox.ReadOnly = true;
-            this.OverviewToTextBox.Size = new System.Drawing.Size(101, 22);
+            this.OverviewToTextBox.Size = new System.Drawing.Size(165, 22);
             this.OverviewToTextBox.TabIndex = 27;
             // 
             // OverviewFromTextBox
             // 
-            this.OverviewFromTextBox.Location = new System.Drawing.Point(256, 361);
+            this.OverviewFromTextBox.Location = new System.Drawing.Point(191, 370);
             this.OverviewFromTextBox.Name = "OverviewFromTextBox";
             this.OverviewFromTextBox.ReadOnly = true;
-            this.OverviewFromTextBox.Size = new System.Drawing.Size(101, 22);
+            this.OverviewFromTextBox.Size = new System.Drawing.Size(153, 22);
             this.OverviewFromTextBox.TabIndex = 26;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(366, 364);
+            this.label35.Location = new System.Drawing.Point(350, 370);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(25, 17);
             this.label35.TabIndex = 25;
@@ -437,7 +420,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(186, 364);
+            this.label36.Location = new System.Drawing.Point(121, 370);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(40, 17);
             this.label36.TabIndex = 24;
@@ -767,11 +750,29 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Network";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(316, 309);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 25);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Message";
+            // 
+            // EavesdropperMessageTextBox
+            // 
+            this.EavesdropperMessageTextBox.Location = new System.Drawing.Point(200, 352);
+            this.EavesdropperMessageTextBox.Name = "EavesdropperMessageTextBox";
+            this.EavesdropperMessageTextBox.Size = new System.Drawing.Size(342, 22);
+            this.EavesdropperMessageTextBox.TabIndex = 15;
+            // 
             // RSAEncryption
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 553);
+            this.ClientSize = new System.Drawing.Size(976, 553);
             this.Controls.Add(this.ValuesPanel);
             this.Controls.Add(this.NetworkPanel);
             this.Controls.Add(this.OverviewPanel);
@@ -802,10 +803,7 @@
         private System.Windows.Forms.Button EavesdropperButton;
         private System.Windows.Forms.Panel EavesdropperPanel;
         private System.Windows.Forms.Button EavesdropperGoButton;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
@@ -843,11 +841,8 @@
         private System.Windows.Forms.Panel NetworkPanel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox EavesdropperMessageTextBox;
-        private System.Windows.Forms.TextBox EavesdropperServerPrivateKeyBTextBox;
-        private System.Windows.Forms.TextBox EavesdropperServerPrivateKeyATextBox;
-        private System.Windows.Forms.TextBox EavesdropperClientPrivateKeyBTextBox;
-        private System.Windows.Forms.TextBox EavesdropperClientPrivateKeyATextBox;
+        private System.Windows.Forms.TextBox EavesdropperServerPublicKeyTextBox;
+        private System.Windows.Forms.TextBox EavesdropperClientPublicKeyTextBox;
         private System.Windows.Forms.TextBox OverviewServerPortTextBox;
         private System.Windows.Forms.TextBox OverviewServerIPTextBox;
         private System.Windows.Forms.TextBox OverviewClientPortTextBox;
@@ -867,6 +862,12 @@
         private System.Windows.Forms.TextBox OverviewServerPubKeyTextBox;
         private System.Windows.Forms.TextBox OverviewClientPrivKeyTextBox;
         private System.Windows.Forms.TextBox OverviewClientPubKeyTextBox;
+        private System.Windows.Forms.TextBox EavesdropperServerPrivateKeyTextBox;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox EavesdropperClientPrivateKeyTextBox;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox EavesdropperMessageTextBox;
+        private System.Windows.Forms.Label label8;
     }
 }
 

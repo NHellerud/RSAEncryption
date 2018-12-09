@@ -8,7 +8,7 @@ namespace RSAEncryption
 {
     class PrimeNumber
     {
-        static int[] Primes;
+        public int[] Primes;
 
         public PrimeNumber()
         {
@@ -29,7 +29,7 @@ namespace RSAEncryption
 
         }
 
-        public static int returnPrime(int min, int max)
+        public int returnPrime(int min, int max)
         {
             Random r = new Random();
 

@@ -70,12 +70,12 @@ namespace RSAEncryption
 
             Messages[0] = new Message();
             Messages[0].Text = _serverPublicKey.ToString() + " " + _serverConstant.ToString();
-            Messages[0].FromIP = ip.ToString();
+            Messages[0].FromIP = ip.ToString() + " Server";
             Messages[0].ToIP = _ipAddress;
 
             Messages[1] = new Message();
             Messages[1].Text = message;
-            Messages[1].ToIP = ip.ToString();
+            Messages[1].ToIP = ip.ToString()+ " Server";
             Messages[1].FromIP = _ipAddress;
 
             byte[] encrypt = RSAEncryptor.Encrypt(message, _serverPublicKey, _serverConstant);
@@ -90,7 +90,7 @@ namespace RSAEncryption
 
             Messages[2] = new Message();
             Messages[2].Text = temp;
-            Messages[2].ToIP = ip.ToString();
+            Messages[2].ToIP = ip.ToString() + " Server";
             Messages[2].FromIP = _ipAddress;
 
             ASCIIEncoding ascii = new ASCIIEncoding();

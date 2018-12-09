@@ -15,6 +15,7 @@ namespace RSAEncryption
         Message[] messages;
 
         private int _mnum = 0;
+        private int _maxNum;
 
         public Simulation()
         {
@@ -44,12 +45,40 @@ namespace RSAEncryption
             messages[4] = server.Messages[1];
             messages[5] = server.Messages[2];
             _mnum = 0;
+            _maxNum = 5;
+            return messages[_mnum];
+        }
+
+        public Message StartClient()
+        {
+            messages = new Message[10];
+            Thread cThread = client.StartClient();
+            cThread.Join();
+            messages[0] = client.Messages[0];
+            messages[1] = client.Messages[1];
+            messages[2] = client.Messages[2];
+            _mnum = 0;
+            _maxNum = 2;
+            return messages[_mnum];
+        }
+
+        public Message StartServer()
+        {
+            messages = new Message[10];
+            Thread sThread = server.StartServer();
+            sThread.Join();
+            messages[0] = server.Messages[0];
+            messages[1] = server.Messages[1];
+            messages[2] = server.Messages[2];
+            _mnum = 0;
+            _maxNum = 2;
             return messages[_mnum];
         }
 
         public Message NextMessage()
         {
-            if (_mnum == 5)
+     
+            if (_mnum == _maxNum)
                 return messages[_mnum];
             _mnum++;
             return messages[_mnum];
